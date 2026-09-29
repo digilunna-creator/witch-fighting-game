@@ -1,0 +1,101 @@
+.dialogue-container {
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  animation: slideUp 0.5s ease;
+}
+
+.game-scene {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene-visual {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.witch, .enemy {
+  font-size: 6rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.enemy {
+  animation: float 3s ease-in-out infinite 0.5s;
+  color: #d62828;
+}
+
+.vs {
+  font-size: 2rem;
+  color: #9d4edd;
+  font-weight: bold;
+}
+
+.dialogue-box {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #9d4edd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.dialogue-character {
+  font-size: 1.2rem;
+  color: #e0aaff;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.dialogue-text {
+  font-size: 1rem;
+  color: #b8a8d8;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  min-height: 3rem;
+}
+
+.dialogue-next {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #9d4edd 0%, #c77dff 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.dialogue-next:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #9d4edd;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

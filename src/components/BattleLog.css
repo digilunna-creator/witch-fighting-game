@@ -1,0 +1,51 @@
+.battle-log {
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid #9d4edd;
+  border-bottom: 1px solid #9d4edd;
+  padding: 1rem;
+  height: 150px;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+.log-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.log-entry {
+  color: #b8a8d8;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  animation: slideInLog 0.3s ease;
+}
+
+@keyframes slideInLog {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scrollbar styling */
+.battle-log::-webkit-scrollbar {
+  width: 6px;
+}
+
+.battle-log::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.battle-log::-webkit-scrollbar-thumb {
+  background: #9d4edd;
+  border-radius: 3px;
+}
+
+.battle-log::-webkit-scrollbar-thumb:hover {
+  background: #c77dff;
+}
